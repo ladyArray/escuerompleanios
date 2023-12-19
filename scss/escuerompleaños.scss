@@ -1,0 +1,965 @@
+@font-face {
+  font-family: "SplashExtraBold";
+  src: url("https://raw.githubusercontent.com/maxi83c/Fonts/main/Splashextrabold.woff")
+    format("woff");
+}
+
+// utils
+@mixin box($w, $h) {
+  height: $h;
+  width: $w;
+}
+@mixin pse($w, $h, $c: "") {
+  height: $h;
+  width: $w;
+  content: $c;
+  position: absolute;
+}
+@mixin patl($t, $l) {
+  position: absolute;
+  top: $t;
+  left: $l;
+}
+@mixin patr($t, $r) {
+  position: absolute;
+  top: $t;
+  right: $r;
+}
+@mixin pabl($b, $l) {
+  position: absolute;
+  bottom: $b;
+  left: $l;
+}
+@mixin pabr($b, $r) {
+  position: absolute;
+  bottom: $b;
+  right: $r;
+}
+
+//colors:
+$skin: #96d4cf;
+$skin-shadow: #50a3a7;
+$shell: #be652b;
+$shell-shadow: #9f4a25;
+$shell-border: #daefe8;
+$black: #111;
+$chest: #f1e57f;
+$chest-shadow: #c8ba61;
+$orange: #f39637;
+$iris-shadow: #251c21;
+$iris: #a13431;
+$white: white;
+
+//base styles
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  outline: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  user-select: none;
+}
+*:focus {
+  outline: none;
+}
+
+//sea
+body {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden;
+  background: radial-gradient(
+      200vw 30vh at center top,
+      #92e8ff36 0,
+      transparent 30%
+    ),
+    radial-gradient(at top center,
+      #0c2d74 10%, transparent 30%),
+    linear-gradient(#0c2d74 20%, #060604 80%);
+}
+
+//text
+header {
+  font-family: SplashExtraBold;
+  color: #fff3;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: auto;
+  letter-spacing: 3px;
+  text-shadow: 0 0 5px #fff6, 0 0 3px #0009;
+  transform: translatey(200vh) scale(0);
+  opacity: 0;
+  z-index: 2;
+  animation: grow-and-float 10s 10s ease-out infinite;
+  & h1,
+  & h2,
+  & h3 {
+    margin: 0;
+    padding: 0;
+  }
+
+  & h1 {
+    font-size: 3rem;
+  }
+
+  & h2 {
+    font-size: 1rem;
+  }
+  & h3 {
+    font-size: 1.6rem;
+  }
+}
+@keyframes grow-and-float {
+  to {
+    transform: translatey(-200%) scale(2);
+    opacity: 1;
+  }
+}
+.bubbles {
+  @include box(100vw, 100vh);
+  position: absolute;
+  top: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  //Bubbles up effect
+  & div {
+    position: relative;
+    bottom: 0;
+    border-radius: 50%;
+    border: 1px solid #fff5;
+    box-shadow: inset 0 0 4px #fff3;
+    &::after {
+      @include pse(30%, 30%);
+      top: 15%;
+      left: 20%;
+      border-radius: 50%;
+      background: #fff2;
+    }
+  }
+  @for $i from 1 through (random(500) + 100) {
+    & div:nth-child(#{$i}) {
+      $size: (random(25) + 5) + px;
+      @include box(#{$size}, #{$size});
+      $delay: (random(500) * 0.1) + s;
+      animation: up-bubble 20s #{$delay} linear infinite;
+    }
+  }
+}
+@keyframes up-bubble {
+  to {
+    transform: translatey(-170vh);
+  }
+}
+
+
+//squirtle
+.squirtle {
+  @include box(320px, 324px);
+  position: relative;
+
+  & .head-container {
+    @include box(146px, 128px);
+    @include patl(0, 54px);
+    filter: drop-shadow(0 0 1px $black) drop-shadow(0 0 1px $black);
+    z-index: 1;
+    &::after {
+      @include pse(10px, 22px);
+      border-radius: 0 0 50% 20% / 0 0 50% 20%;
+      top: 52px;
+      left: -4px;
+      box-shadow: 6px 1px $skin;
+      transform: rotate(10deg);
+      z-index: -1;
+    }
+    &::before {
+      @include pse(40px, 40px);
+      border-radius: 8px;
+      background: $skin;
+      top: 63px;
+      transform: rotate(50deg);
+    }
+    .head {
+      @include box(139px, 128px);
+      @include patr(0, 0);
+      border-radius: 49% 50% 50% 48% / 44% 50% 40% 30%;
+      background-color: $skin;
+      background-image: linear-gradient(
+          -70deg,
+          $skin-shadow 23%,
+          transparent 24%
+        ),
+        radial-gradient(
+          156px 138px at 50px 50px,
+          transparent 48%,
+          $skin-shadow 50%
+        ),
+        radial-gradient(
+          35px 103px at 135px 65px,
+          $skin-shadow 60%,
+          transparent 64%
+        );
+      overflow: hidden;
+
+      &::after {
+        @include pse(6px, 5px);
+        top: 25px;
+        left: 13px;
+        border-radius: 0 4px 0 0;
+        border-right: 1px solid $black;
+      }
+
+      &::before {
+        @include pse(12px, 12px);
+        top: 22px;
+        left: 68px;
+        border-radius: 18px 0 0 0;
+        border-left: 1px solid $black;
+      }
+
+      & .eye.left {
+        @include box(19px, 40px);
+        border: 1px solid $black;
+        border-radius: 50%;
+        @include patl(26px, -4px);
+        background-color: $iris;
+        background-image: radial-gradient(
+            4px 15px at 14px 10px,
+            $white 48%,
+            transparent 50%
+          ),
+          radial-gradient(
+            16px 37px at 11px 15px,
+            $iris-shadow 48%,
+            transparent 50%
+          );
+      }
+
+      & .eye.right {
+        @include box(35px, 49px);
+        border: 1px solid $black;
+        border-radius: 61% 39% 36% 48% / 84% 58% 12% 16%;
+        @include patl(28px, 68px);
+        background-color: $iris-shadow;
+        background-image: radial-gradient(
+            12px 24px at 11px 10px,
+            $white 45%,
+            transparent 50%
+          ),
+          radial-gradient(
+            18px 33px at 12px 20px,
+            $iris-shadow 45%,
+            transparent 50%
+          ),
+          radial-gradient(29px 46px at 15px 42px, $iris 48%, transparent 50%);
+        box-shadow: inset -6px -2px $white;
+      }
+
+      & .eye {
+        overflow: hidden;
+        &::after {
+          @include pse(100%, 100%);
+          transform: translatey(-100%);
+          background-color: $skin;
+          animation: blink 10s linear infinite;
+        }
+      }
+
+      & .nouse {
+        @include box(19px, 24px);
+        @include patl(64px, 10px);
+        border-radius: 50%;
+        box-shadow: 0 2px 0 -1px $black;
+
+        &::after {
+          @include pse(3px, 3px);
+          top: 9px;
+          left: 2px;
+          border-radius: 0 3px 0 0;
+          border-right: 1px solid $black;
+        }
+
+        &::before {
+          @include pse(3px, 3px);
+          top: 10px;
+          right: 3px;
+          border-radius: 3px 0 0 0;
+          border-left: 1px solid $black;
+        }
+      }
+
+      & .mouth {
+        @include box(64px, 15px);
+        @include patl(79px, 25px);
+        border-radius: 26% 74% 0% 0% / 57% 100% 0% 0%;
+        border-top: 1px solid $black;
+        &::after {
+          @include pse(23px, 12px);
+          border-radius: 50%;
+          background: $skin;
+          top: -2px;
+          right: -15px;
+          box-shadow: 0 2px 0 -1px $black, 0 6px 0 -1px $skin;
+        }
+
+        &::before {
+          @include pse(13px, 7px);
+          border-radius: 5px 13px 0 50%;
+          top: -1px;
+          left: -25px;
+          border-top: 1px solid $black;
+        }
+      }
+    }
+  }
+
+  & .body {
+    @include box(316px, 229px);
+    @include patl(94px, 2px);
+
+    & .chest {
+      @include box(156px, 179px);
+      @include patl(4px, 58px);
+      border-radius: 50%;
+      background-color: $chest;
+      background-image: radial-gradient(
+          167px 40px at 106px 28px,
+          $chest-shadow 48%,
+          transparent 50%
+        ),
+        radial-gradient(
+          138px 204px at 48px 45px,
+          transparent 48%,
+          $chest-shadow 50%
+        );
+      filter: drop-shadow(0 0 1px $black) drop-shadow(0 0 1px $black);
+      overflow: hidden;
+
+      & .top {
+        @include box(177px, 88px);
+        @include patl(-25px, -10px);
+        border-radius: 50%;
+        border: 1px solid $black;
+      }
+
+      & .center {
+        @include box(80px, 92px);
+        @include patl(60px, 12px);
+        overflow: hidden;
+        &::after {
+          @include pse(106px, 229px);
+          top: -68px;
+          left: 32px;
+          border-radius: 50%;
+          border: 1px solid $black;
+        }
+        &::before {
+          @include pse(292px, 94px);
+          top: -40px;
+          left: -57px;
+          border-radius: 50%;
+          border: 1px solid $black;
+        }
+      }
+
+      & .left {
+        @include box(12px, 40px);
+        @include patl(80px, 0);
+        overflow: hidden;
+        &::after {
+          @include pse(106px, 1px);
+          top: 5px;
+          left: -50px;
+          border-top: 1px solid $black;
+          transform: rotate(65deg);
+        }
+        &::before {
+          @include pse(106px, 1px);
+          top: 43px;
+          left: -50px;
+          border-top: 1px solid $black;
+          transform: rotate(-65deg);
+        }
+      }
+
+      & .right {
+        @include box(61px, 143px);
+        @include patl(58px, 92px);
+        overflow: hidden;
+        &::after {
+          @include pse(206px, 1px);
+          top: 62px;
+          left: -100px;
+          border-top: 1px solid $black;
+          transform: rotate(65deg);
+        }
+        &::before {
+          @include pse(206px, 1px);
+          top: 24px;
+          left: -88px;
+          border-top: 1px solid $black;
+          transform: rotate(-65deg);
+        }
+      }
+
+      & .bottom {
+        @include box(69px, 34px);
+        @include patl(152px, 33px);
+        overflow: hidden;
+        &::after {
+          @include pse(206px, 1px);
+          top: 56px;
+          left: -1px;
+          border-top: 1px solid $black;
+          transform: rotate(33deg);
+        }
+        &::before {
+          @include pse(206px, 1px);
+          top: 1px;
+          left: -89px;
+          border-top: 1px solid $black;
+          transform: rotate(-33deg);
+        }
+      }
+    }
+
+    & .shell {
+      @include box(40px, 172px);
+      @include patl(6px, 187px);
+      overflow: hidden;
+
+      & .inner {
+        @include box(105px, 171px);
+        @include patr(0, 1px);
+        border-radius: 50%;
+        background-color: $shell;
+        background-image: radial-gradient(
+            78px 61px at 90px 151px,
+            $shell-shadow 48%,
+            transparent 50%
+          ),
+          radial-gradient(
+            60px 114px at 50px 25px,
+            $shell-shadow 48%,
+            transparent 50%
+          ),
+          radial-gradient(
+            87px 181px at 45px 94px,
+            $shell-shadow 48%,
+            transparent 50%
+          );
+        border: 1px solid $black;
+        filter: drop-shadow(0 0 1px $black);
+
+        &::after {
+          @include pse(135px, 114px);
+          border-radius: 50%;
+          top: 24px;
+          right: -3px;
+          border: 1px solid $black;
+          overflow: hidden;
+        }
+      }
+    }
+
+    & .shell-border {
+      @include box(28px, 177px);
+      @include patl(-1px, 176px);
+      filter: drop-shadow(0 0 1px $black) drop-shadow(0 0 1px $black);
+
+      & .top {
+        @include box(21px, 52px);
+        @include patl(0, 0);
+
+        &::before {
+          @include pse(21px, 23px);
+          background: $shell-border;
+          border-radius: 50%;
+        }
+
+        &::after {
+          @include pse(21px, 38px);
+          background: $shell-border;
+          bottom: 0;
+          clip-path: polygon(
+            0 0,
+            11% 21%,
+            4% 52%,
+            8% 76%,
+            21% 100%,
+            85% 100%,
+            65% 81%,
+            66% 66%,
+            76% 45%,
+            100% 0
+          );
+        }
+      }
+
+      & .center {
+        @include box(28px, 65px);
+        @include patr(50px, 0);
+
+        &::before {
+          @include pse(100%, 100%);
+          background: $shell-border;
+          border-radius: 50%;
+          clip-path: polygon(31% 0, 100% 0, 100% 100%, 30% 100%);
+        }
+
+        &::after {
+          @include pse(50%, 100%);
+          background: $shell-border;
+          clip-path: polygon(
+            30% 0,
+            48% 20%,
+            57% 42%,
+            57% 60%,
+            45% 76%,
+            14% 100%,
+            100% 100%,
+            100% 0
+          );
+        }
+      }
+
+      & .bottom {
+        @include box(27px, 63px);
+        @include pabr(0, 0);
+
+        &::before {
+          @include pse(23px, 95%);
+          background: $shell-border;
+          border-radius: 50%;
+          bottom: 0;
+          right: 0;
+          clip-path: polygon(
+            27% 20%,
+            42% 15%,
+            63% 25%,
+            78% 38%,
+            89% 50%,
+            95% 64%,
+            90% 79%,
+            100% 100%,
+            30% 100%
+          );
+        }
+
+        &::after {
+          @include pse(20px, 100%);
+          background: $shell-border;
+          border-radius: 4px 0 10px 20px;
+          clip-path: polygon(
+            0 0,
+            87% -3%,
+            62% 8%,
+            95% 43%,
+            92% 60%,
+            100% 100%,
+            0 100%,
+            21% 79%,
+            35% 64%,
+            40% 49%,
+            35% 34%,
+            15% 21%
+          );
+        }
+      }
+    }
+
+    & .arm.left {
+      @include box(95px, 63px);
+      @include patl(24px, 0);
+      overflow: hidden;
+      filter: drop-shadow(0 0 1px $black) drop-shadow(0 0 1px $black);
+      animation: move-arm 6s linear infinite;
+      transform-origin: 100% 30%;
+
+      &::before {
+        @include pse(155px, 90px);
+        left: 20px;
+        border-radius: 50%;
+        background: linear-gradient(transparent 50%, $skin-shadow 0),
+          radial-gradient(at 45% 50%, $skin-shadow 50%, $skin 51%);
+      }
+
+      &::after {
+        @include pse(12px, 14px);
+        @include patl(35px, 24px);
+        border: 1px solid;
+        border-color: transparent transparent $black $black;
+        transform: rotate(40deg);
+      }
+
+      & .hand {
+        @include box(30px, 36px);
+        @include patl(27px, 0);
+        border-radius: 100% 0% 0% 100% / 20% 0% 0% 24%;
+        background: radial-gradient(
+          42px 22px at 15px 3px,
+          $skin 48%,
+          $skin-shadow 50%
+        );
+        clip-path: polygon(
+          0 5%,
+          0% 0%,
+          100% 0,
+          100% 100%,
+          0 100%,
+          0% 80%,
+          23% 46%
+        );
+      }
+    }
+
+    & .arm.right {
+      @include box(78px, 81px);
+      @include patl(27px, 122px);
+      filter: drop-shadow(0 0 1px $black) drop-shadow(0 0 1px $black);
+      animation: move-arm 6s linear infinite;
+      transform-origin: 80% 40%;
+      &::after {
+        @include pse(20px, 14px);
+        background: radial-gradient(
+          83px 39px at -21px -5px,
+          $skin 48%,
+          $skin-shadow 50%
+        );
+        bottom: 7px;
+        border-radius: 0 0 0 3px;
+        clip-path: polygon(0 11px, 50% 0, 100% 0, 100% 100%, 0 100%);
+      }
+
+      &::before {
+        @include pse(61px, 85px);
+        border-radius: 45% 55% 50% 50% / 44% 50% 50% 56%;
+        right: 5px;
+        top: -2px;
+        background-color: $skin;
+        transform: rotate(32deg);
+        background-image: radial-gradient(
+            80px at -7px 47px,
+            transparent 48%,
+            $skin-shadow 50%
+          ),
+          radial-gradient(36px at 38px 69px, $skin-shadow 48%, transparent 50%),
+          radial-gradient(
+            37px 67px at 18px 55px,
+            transparent 48%,
+            $skin-shadow 50%
+          );
+      }
+
+      & .hand {
+        @include box(35px, 29px);
+        @include pabl(9px, 17px);
+
+        &::after {
+          @include pse(14px, 14px);
+          border: 1px solid;
+          border-radius: 0 4px 0 0;
+          border-color: $black $black transparent transparent;
+          transform: rotate(-40deg);
+          top: 1px;
+          left: 1px;
+        }
+
+        &::before {
+          @include pse(14px, 14px);
+          border: 1px solid;
+          border-radius: 0 4px 0 0;
+          border-color: $black $black transparent transparent;
+          transform: rotate(5deg);
+          top: 12px;
+          left: 21px;
+          box-shadow: inset 0 2px 0 $skin;
+        }
+      }
+    }
+
+    & .leg.left {
+      filter: drop-shadow(0 0 1px $black) drop-shadow(0 0 1px $black);
+
+      & .top {
+        @include box(88px, 69px);
+        @include patl(115px, 41px);
+        overflow: hidden;
+
+        &::after {
+          @include pse(71px, 64px);
+          top: 51px;
+          left: 48px;
+          border-radius: 50%;
+          box-shadow: -20px -20px $skin-shadow;
+        }
+
+        &::before {
+          @include pse(88px, 116px);
+          border-radius: 50%;
+          background-image: radial-gradient(
+            66px 133px at -4px -6px,
+            $skin 48%,
+            $skin-shadow 50% 90%,
+            transparent 91%
+          );
+        }
+      }
+
+      & .foot {
+        @include box(66px, 27px);
+        @include patl(184px, 28px);
+        //overflow: hidden;
+
+        &::before {
+          @include pse(66px, 31px);
+          top: -3px;
+          border-radius: 50%;
+          background: $skin-shadow;
+          clip-path: polygon(
+            0 16px,
+            1px 3px,
+            60px 3px,
+            62px 18px,
+            21px 30px,
+            21px 28px,
+            22px 22px,
+            8px 24px,
+            6px 23px,
+            10px 16px
+          );
+        }
+
+        &::after {
+          @include pse(31px, 48px);
+          border-radius: 50%;
+          right: -26px;
+          top: -9px;
+          box-shadow: -17px -23px 0 $skin-shadow;
+        }
+
+        & .fingers {
+          z-index: 1;
+
+          &::before {
+            @include pse(1px, 5px);
+            border-left: 1px solid $black;
+            left: 9px;
+            top: 8px;
+            transform-origin: bottom;
+            transform: rotate(30deg);
+          }
+
+          &::after {
+            @include pse(6px, 5px);
+            border-left: 1px solid $black;
+            left: 21px;
+            top: 15px;
+            border-radius: 6px 0 0 0;
+          }
+        }
+      }
+    }
+
+    & .leg.right {
+      @include box(73px, 99px);
+      @include pabl(1px, 142px);
+      filter: drop-shadow(0 0 1px $black) drop-shadow(0 0 1px $black);
+
+      & .top {
+        @include box(69px, 42px);
+        position: absolute;
+        border-radius: 55% 45% 0% 0% / 100% 80% 0% 0%;
+        background-image: radial-gradient(
+            53px 45px at 25px 35px,
+            $skin 48%,
+            transparent 50%
+          ),
+          radial-gradient(42px 57px at 36px 33px, $skin 48%, $skin-shadow 50%);
+      }
+
+      & .center {
+        @include box(69px, 31px);
+        position: absolute;
+        top: 42px;
+        overflow: hidden;
+
+        &::before {
+          @include pse(53px, 69px);
+          top: -4px;
+          left: -41px;
+          border-radius: 50%;
+          box-shadow: 4px 0 0 $skin-shadow, 5px -20px 0 $skin;
+        }
+
+        &::after {
+          @include pse(54px, 92px);
+          right: 0;
+          top: -42px;
+          border-radius: 0 50% 50% 0;
+          background: radial-gradient(
+            56px 77px at 14px 32px,
+            $skin 48%,
+            $skin-shadow 50%
+          );
+        }
+      }
+
+      & .foot {
+        @include box(61px, 26px);
+        @include pabr(0, 0);
+        overflow: hidden;
+        &::before {
+          @include pse(20px, 54px);
+          top: -12px;
+          left: -18px;
+          border-radius: 50%;
+          box-shadow: 10px -20px $skin-shadow;
+        }
+
+        &::after {
+          @include pse(21px, 29px);
+          top: -9px;
+          right: -11px;
+          border-radius: 50%;
+          box-shadow: -7px -2px $skin-shadow;
+        }
+
+        & .finger:nth-child(1) {
+          @include box(28px, 18px);
+          @include pabl(-10px, 1px);
+          border-radius: 50%;
+          box-shadow: 2px -12px $skin-shadow, 6px -20px $skin-shadow;
+        }
+
+        & .finger:nth-child(2) {
+          @include box(29px, 19px);
+          @include pabr(-11px, 1px);
+          border-radius: 50%;
+          box-shadow: -11px -22px $skin-shadow, -2px -9px 0 -3px $skin-shadow,
+            -11px -14px $skin-shadow;
+        }
+      }
+    }
+
+    & .tail {
+      @include box(143px, 89px);
+      @include pabr(31px, 1px);
+      filter: drop-shadow(0 0 1px $black) drop-shadow(0 0 1px $black);
+      overflow: hidden;
+      animation: move-tail 3s alternate linear infinite;
+      transform-origin: 5% 40%;
+
+      & .center {
+        @include box(85px, 89px);
+        position: absolude;
+
+        &::before {
+          @include pse(117px, 43px);
+          top: 80px;
+          right: 48px;
+          border-radius: 50%;
+          box-shadow: -10px -14px $skin-shadow;
+        }
+
+        &::after {
+          @include pse(88px, 56px);
+          top: -7px;
+          right: 80px;
+          border-radius: 50%;
+          box-shadow: -4px 25px $skin, 13px 26px $skin;
+        }
+      }
+
+      &::before {
+        @include pse(74px, 79px);
+        top: 10px;
+        left: 53px;
+        border-radius: 50%;
+        background-image: radial-gradient(
+            71px 54px at -5px 20px,
+            $skin 48%,
+            transparent 50%
+          ),
+          radial-gradient(71px 54px at -5px 35px, $skin 48%, $skin-shadow 50%);
+        box-shadow: 3px -3px $skin;
+      }
+
+      &::after {
+        @include pse(48px, 14px);
+        border-radius: 50%;
+        top: 55px;
+        left: 24px;
+        box-shadow: -2px 7px $skin-shadow;
+      }
+
+      & .end {
+        @include box(78px, 80px);
+        @include patr(1px, 0);
+        border-radius: 50%;
+        background-image: radial-gradient(
+            71px 54px at -10px 40px,
+            $skin 48%,
+            transparent 50%
+          ),
+          radial-gradient(91px 94px at 40px 10px, $skin 48%, $skin-shadow 50%);
+        overflow: hidden;
+
+        &::before {
+          @include pse(36px, 43px);
+          border-radius: 50% 50% 0 50%;
+          border: 1px solid;
+          bottom: 0;
+          left: 21px;
+          border-color: $black transparent $black $black;
+        }
+      }
+    }
+  }
+
+  &::before{
+    @include pse(120%, 40%);
+    @include pabl(-12%, 9%);
+    background: #000;
+    border-radius: 50%;
+  }
+}
+
+
+@keyframes blink {
+  0%,
+  30%,
+  34%,
+  100% {
+    transform: translatey(-100%);
+  }
+  32% {
+    transform: translatey(0);
+  }
+}
+
+@keyframes move-tail {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(10deg);
+  }
+}
+
+@keyframes move-arm {
+  0%,
+  20%,
+  40%,
+  40%,
+  60%,
+  100% {
+    transform: rotate(0);
+  }
+  30%,
+  50% {
+    transform: rotate(-5deg);
+  }
+}

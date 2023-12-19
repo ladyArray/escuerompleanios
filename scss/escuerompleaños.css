@@ -1,0 +1,1796 @@
+@font-face {
+  font-family: "SplashExtraBold";
+  src: url("https://raw.githubusercontent.com/maxi83c/Fonts/main/Splashextrabold.woff") format("woff");
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  outline: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  user-select: none;
+}
+
+*:focus {
+  outline: none;
+}
+
+body {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden;
+  background: radial-gradient(200vw 30vh at center top, rgba(146, 232, 255, 0.2117647059) 0, transparent 30%), radial-gradient(at top center, #0c2d74 10%, transparent 30%), linear-gradient(#0c2d74 20%, #060604 80%);
+}
+
+header {
+  font-family: SplashExtraBold;
+  color: rgba(255, 255, 255, 0.2);
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: auto;
+  letter-spacing: 3px;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.4), 0 0 3px rgba(0, 0, 0, 0.6);
+  transform: translatey(200vh) scale(0);
+  opacity: 0;
+  z-index: 2;
+  animation: grow-and-float 10s 10s ease-out infinite;
+}
+header h1, header h2, header h3 {
+  margin: 0;
+  padding: 0;
+}
+header h1 {
+  font-size: 3rem;
+}
+header h2 {
+  font-size: 1rem;
+}
+header h3 {
+  font-size: 1.6rem;
+}
+
+@keyframes grow-and-float {
+  to {
+    transform: translatey(-200%) scale(2);
+    opacity: 1;
+  }
+}
+.bubbles {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+.bubbles div {
+  position: relative;
+  bottom: 0;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.3333333333);
+  box-shadow: inset 0 0 4px rgba(255, 255, 255, 0.2);
+}
+.bubbles div::after {
+  height: 30%;
+  width: 30%;
+  content: "";
+  position: absolute;
+  top: 15%;
+  left: 20%;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1333333333);
+}
+.bubbles div:nth-child(1) {
+  height: 25px;
+  width: 25px;
+  animation: up-bubble 20s 23.2s linear infinite;
+}
+.bubbles div:nth-child(2) {
+  height: 15px;
+  width: 15px;
+  animation: up-bubble 20s 3.8s linear infinite;
+}
+.bubbles div:nth-child(3) {
+  height: 27px;
+  width: 27px;
+  animation: up-bubble 20s 32s linear infinite;
+}
+.bubbles div:nth-child(4) {
+  height: 28px;
+  width: 28px;
+  animation: up-bubble 20s 25s linear infinite;
+}
+.bubbles div:nth-child(5) {
+  height: 23px;
+  width: 23px;
+  animation: up-bubble 20s 29.8s linear infinite;
+}
+.bubbles div:nth-child(6) {
+  height: 29px;
+  width: 29px;
+  animation: up-bubble 20s 17.8s linear infinite;
+}
+.bubbles div:nth-child(7) {
+  height: 11px;
+  width: 11px;
+  animation: up-bubble 20s 46.4s linear infinite;
+}
+.bubbles div:nth-child(8) {
+  height: 11px;
+  width: 11px;
+  animation: up-bubble 20s 17.5s linear infinite;
+}
+.bubbles div:nth-child(9) {
+  height: 19px;
+  width: 19px;
+  animation: up-bubble 20s 40.1s linear infinite;
+}
+.bubbles div:nth-child(10) {
+  height: 15px;
+  width: 15px;
+  animation: up-bubble 20s 13.2s linear infinite;
+}
+.bubbles div:nth-child(11) {
+  height: 16px;
+  width: 16px;
+  animation: up-bubble 20s 18.8s linear infinite;
+}
+.bubbles div:nth-child(12) {
+  height: 21px;
+  width: 21px;
+  animation: up-bubble 20s 36.6s linear infinite;
+}
+.bubbles div:nth-child(13) {
+  height: 17px;
+  width: 17px;
+  animation: up-bubble 20s 25s linear infinite;
+}
+.bubbles div:nth-child(14) {
+  height: 10px;
+  width: 10px;
+  animation: up-bubble 20s 20s linear infinite;
+}
+.bubbles div:nth-child(15) {
+  height: 15px;
+  width: 15px;
+  animation: up-bubble 20s 23s linear infinite;
+}
+.bubbles div:nth-child(16) {
+  height: 14px;
+  width: 14px;
+  animation: up-bubble 20s 38.5s linear infinite;
+}
+.bubbles div:nth-child(17) {
+  height: 29px;
+  width: 29px;
+  animation: up-bubble 20s 2.4s linear infinite;
+}
+.bubbles div:nth-child(18) {
+  height: 19px;
+  width: 19px;
+  animation: up-bubble 20s 21.5s linear infinite;
+}
+.bubbles div:nth-child(19) {
+  height: 27px;
+  width: 27px;
+  animation: up-bubble 20s 9.4s linear infinite;
+}
+.bubbles div:nth-child(20) {
+  height: 30px;
+  width: 30px;
+  animation: up-bubble 20s 8.8s linear infinite;
+}
+.bubbles div:nth-child(21) {
+  height: 25px;
+  width: 25px;
+  animation: up-bubble 20s 45.7s linear infinite;
+}
+.bubbles div:nth-child(22) {
+  height: 20px;
+  width: 20px;
+  animation: up-bubble 20s 0.8s linear infinite;
+}
+.bubbles div:nth-child(23) {
+  height: 20px;
+  width: 20px;
+  animation: up-bubble 20s 18.8s linear infinite;
+}
+.bubbles div:nth-child(24) {
+  height: 13px;
+  width: 13px;
+  animation: up-bubble 20s 12.6s linear infinite;
+}
+.bubbles div:nth-child(25) {
+  height: 20px;
+  width: 20px;
+  animation: up-bubble 20s 34.2s linear infinite;
+}
+.bubbles div:nth-child(26) {
+  height: 18px;
+  width: 18px;
+  animation: up-bubble 20s 43.8s linear infinite;
+}
+.bubbles div:nth-child(27) {
+  height: 18px;
+  width: 18px;
+  animation: up-bubble 20s 20.9s linear infinite;
+}
+.bubbles div:nth-child(28) {
+  height: 12px;
+  width: 12px;
+  animation: up-bubble 20s 4.5s linear infinite;
+}
+.bubbles div:nth-child(29) {
+  height: 10px;
+  width: 10px;
+  animation: up-bubble 20s 38s linear infinite;
+}
+.bubbles div:nth-child(30) {
+  height: 20px;
+  width: 20px;
+  animation: up-bubble 20s 46.1s linear infinite;
+}
+.bubbles div:nth-child(31) {
+  height: 20px;
+  width: 20px;
+  animation: up-bubble 20s 1.2s linear infinite;
+}
+.bubbles div:nth-child(32) {
+  height: 28px;
+  width: 28px;
+  animation: up-bubble 20s 30.7s linear infinite;
+}
+.bubbles div:nth-child(33) {
+  height: 21px;
+  width: 21px;
+  animation: up-bubble 20s 45.9s linear infinite;
+}
+.bubbles div:nth-child(34) {
+  height: 18px;
+  width: 18px;
+  animation: up-bubble 20s 18.5s linear infinite;
+}
+.bubbles div:nth-child(35) {
+  height: 16px;
+  width: 16px;
+  animation: up-bubble 20s 36.2s linear infinite;
+}
+.bubbles div:nth-child(36) {
+  height: 23px;
+  width: 23px;
+  animation: up-bubble 20s 33.4s linear infinite;
+}
+.bubbles div:nth-child(37) {
+  height: 26px;
+  width: 26px;
+  animation: up-bubble 20s 36.6s linear infinite;
+}
+.bubbles div:nth-child(38) {
+  height: 13px;
+  width: 13px;
+  animation: up-bubble 20s 32.5s linear infinite;
+}
+.bubbles div:nth-child(39) {
+  height: 21px;
+  width: 21px;
+  animation: up-bubble 20s 40.8s linear infinite;
+}
+.bubbles div:nth-child(40) {
+  height: 9px;
+  width: 9px;
+  animation: up-bubble 20s 25.4s linear infinite;
+}
+.bubbles div:nth-child(41) {
+  height: 18px;
+  width: 18px;
+  animation: up-bubble 20s 16.1s linear infinite;
+}
+.bubbles div:nth-child(42) {
+  height: 26px;
+  width: 26px;
+  animation: up-bubble 20s 47.3s linear infinite;
+}
+.bubbles div:nth-child(43) {
+  height: 24px;
+  width: 24px;
+  animation: up-bubble 20s 42.4s linear infinite;
+}
+.bubbles div:nth-child(44) {
+  height: 17px;
+  width: 17px;
+  animation: up-bubble 20s 11s linear infinite;
+}
+.bubbles div:nth-child(45) {
+  height: 29px;
+  width: 29px;
+  animation: up-bubble 20s 21s linear infinite;
+}
+.bubbles div:nth-child(46) {
+  height: 27px;
+  width: 27px;
+  animation: up-bubble 20s 29.7s linear infinite;
+}
+.bubbles div:nth-child(47) {
+  height: 8px;
+  width: 8px;
+  animation: up-bubble 20s 35.3s linear infinite;
+}
+.bubbles div:nth-child(48) {
+  height: 24px;
+  width: 24px;
+  animation: up-bubble 20s 25.9s linear infinite;
+}
+.bubbles div:nth-child(49) {
+  height: 20px;
+  width: 20px;
+  animation: up-bubble 20s 35.4s linear infinite;
+}
+.bubbles div:nth-child(50) {
+  height: 16px;
+  width: 16px;
+  animation: up-bubble 20s 16.8s linear infinite;
+}
+.bubbles div:nth-child(51) {
+  height: 13px;
+  width: 13px;
+  animation: up-bubble 20s 13.1s linear infinite;
+}
+.bubbles div:nth-child(52) {
+  height: 23px;
+  width: 23px;
+  animation: up-bubble 20s 24.9s linear infinite;
+}
+.bubbles div:nth-child(53) {
+  height: 11px;
+  width: 11px;
+  animation: up-bubble 20s 21.5s linear infinite;
+}
+.bubbles div:nth-child(54) {
+  height: 10px;
+  width: 10px;
+  animation: up-bubble 20s 34.5s linear infinite;
+}
+.bubbles div:nth-child(55) {
+  height: 16px;
+  width: 16px;
+  animation: up-bubble 20s 14s linear infinite;
+}
+.bubbles div:nth-child(56) {
+  height: 10px;
+  width: 10px;
+  animation: up-bubble 20s 32.3s linear infinite;
+}
+.bubbles div:nth-child(57) {
+  height: 12px;
+  width: 12px;
+  animation: up-bubble 20s 11.3s linear infinite;
+}
+.bubbles div:nth-child(58) {
+  height: 26px;
+  width: 26px;
+  animation: up-bubble 20s 50s linear infinite;
+}
+.bubbles div:nth-child(59) {
+  height: 24px;
+  width: 24px;
+  animation: up-bubble 20s 43.5s linear infinite;
+}
+.bubbles div:nth-child(60) {
+  height: 25px;
+  width: 25px;
+  animation: up-bubble 20s 3.5s linear infinite;
+}
+.bubbles div:nth-child(61) {
+  height: 15px;
+  width: 15px;
+  animation: up-bubble 20s 47.7s linear infinite;
+}
+.bubbles div:nth-child(62) {
+  height: 14px;
+  width: 14px;
+  animation: up-bubble 20s 49.9s linear infinite;
+}
+.bubbles div:nth-child(63) {
+  height: 18px;
+  width: 18px;
+  animation: up-bubble 20s 30.3s linear infinite;
+}
+.bubbles div:nth-child(64) {
+  height: 28px;
+  width: 28px;
+  animation: up-bubble 20s 23.5s linear infinite;
+}
+.bubbles div:nth-child(65) {
+  height: 8px;
+  width: 8px;
+  animation: up-bubble 20s 49s linear infinite;
+}
+.bubbles div:nth-child(66) {
+  height: 9px;
+  width: 9px;
+  animation: up-bubble 20s 18.6s linear infinite;
+}
+.bubbles div:nth-child(67) {
+  height: 28px;
+  width: 28px;
+  animation: up-bubble 20s 43.5s linear infinite;
+}
+.bubbles div:nth-child(68) {
+  height: 10px;
+  width: 10px;
+  animation: up-bubble 20s 34.3s linear infinite;
+}
+.bubbles div:nth-child(69) {
+  height: 30px;
+  width: 30px;
+  animation: up-bubble 20s 24.5s linear infinite;
+}
+.bubbles div:nth-child(70) {
+  height: 14px;
+  width: 14px;
+  animation: up-bubble 20s 0.8s linear infinite;
+}
+.bubbles div:nth-child(71) {
+  height: 20px;
+  width: 20px;
+  animation: up-bubble 20s 24.4s linear infinite;
+}
+.bubbles div:nth-child(72) {
+  height: 29px;
+  width: 29px;
+  animation: up-bubble 20s 14.7s linear infinite;
+}
+.bubbles div:nth-child(73) {
+  height: 28px;
+  width: 28px;
+  animation: up-bubble 20s 27.1s linear infinite;
+}
+.bubbles div:nth-child(74) {
+  height: 10px;
+  width: 10px;
+  animation: up-bubble 20s 40.9s linear infinite;
+}
+.bubbles div:nth-child(75) {
+  height: 21px;
+  width: 21px;
+  animation: up-bubble 20s 28.1s linear infinite;
+}
+.bubbles div:nth-child(76) {
+  height: 22px;
+  width: 22px;
+  animation: up-bubble 20s 46.4s linear infinite;
+}
+.bubbles div:nth-child(77) {
+  height: 26px;
+  width: 26px;
+  animation: up-bubble 20s 34.5s linear infinite;
+}
+.bubbles div:nth-child(78) {
+  height: 13px;
+  width: 13px;
+  animation: up-bubble 20s 6.2s linear infinite;
+}
+.bubbles div:nth-child(79) {
+  height: 26px;
+  width: 26px;
+  animation: up-bubble 20s 19.6s linear infinite;
+}
+.bubbles div:nth-child(80) {
+  height: 11px;
+  width: 11px;
+  animation: up-bubble 20s 25.5s linear infinite;
+}
+.bubbles div:nth-child(81) {
+  height: 26px;
+  width: 26px;
+  animation: up-bubble 20s 45.7s linear infinite;
+}
+.bubbles div:nth-child(82) {
+  height: 16px;
+  width: 16px;
+  animation: up-bubble 20s 6.9s linear infinite;
+}
+.bubbles div:nth-child(83) {
+  height: 30px;
+  width: 30px;
+  animation: up-bubble 20s 9.5s linear infinite;
+}
+.bubbles div:nth-child(84) {
+  height: 10px;
+  width: 10px;
+  animation: up-bubble 20s 36.2s linear infinite;
+}
+.bubbles div:nth-child(85) {
+  height: 21px;
+  width: 21px;
+  animation: up-bubble 20s 11.4s linear infinite;
+}
+.bubbles div:nth-child(86) {
+  height: 22px;
+  width: 22px;
+  animation: up-bubble 20s 28.9s linear infinite;
+}
+.bubbles div:nth-child(87) {
+  height: 11px;
+  width: 11px;
+  animation: up-bubble 20s 21.8s linear infinite;
+}
+.bubbles div:nth-child(88) {
+  height: 19px;
+  width: 19px;
+  animation: up-bubble 20s 39.6s linear infinite;
+}
+.bubbles div:nth-child(89) {
+  height: 25px;
+  width: 25px;
+  animation: up-bubble 20s 44.6s linear infinite;
+}
+.bubbles div:nth-child(90) {
+  height: 21px;
+  width: 21px;
+  animation: up-bubble 20s 35.9s linear infinite;
+}
+.bubbles div:nth-child(91) {
+  height: 26px;
+  width: 26px;
+  animation: up-bubble 20s 46.9s linear infinite;
+}
+.bubbles div:nth-child(92) {
+  height: 30px;
+  width: 30px;
+  animation: up-bubble 20s 43.1s linear infinite;
+}
+.bubbles div:nth-child(93) {
+  height: 28px;
+  width: 28px;
+  animation: up-bubble 20s 39.9s linear infinite;
+}
+.bubbles div:nth-child(94) {
+  height: 26px;
+  width: 26px;
+  animation: up-bubble 20s 20.6s linear infinite;
+}
+.bubbles div:nth-child(95) {
+  height: 10px;
+  width: 10px;
+  animation: up-bubble 20s 45.5s linear infinite;
+}
+.bubbles div:nth-child(96) {
+  height: 8px;
+  width: 8px;
+  animation: up-bubble 20s 47.2s linear infinite;
+}
+.bubbles div:nth-child(97) {
+  height: 11px;
+  width: 11px;
+  animation: up-bubble 20s 4.8s linear infinite;
+}
+.bubbles div:nth-child(98) {
+  height: 8px;
+  width: 8px;
+  animation: up-bubble 20s 20.9s linear infinite;
+}
+.bubbles div:nth-child(99) {
+  height: 22px;
+  width: 22px;
+  animation: up-bubble 20s 49.6s linear infinite;
+}
+.bubbles div:nth-child(100) {
+  height: 17px;
+  width: 17px;
+  animation: up-bubble 20s 26.8s linear infinite;
+}
+.bubbles div:nth-child(101) {
+  height: 15px;
+  width: 15px;
+  animation: up-bubble 20s 22.6s linear infinite;
+}
+.bubbles div:nth-child(102) {
+  height: 29px;
+  width: 29px;
+  animation: up-bubble 20s 20.7s linear infinite;
+}
+.bubbles div:nth-child(103) {
+  height: 17px;
+  width: 17px;
+  animation: up-bubble 20s 20.2s linear infinite;
+}
+.bubbles div:nth-child(104) {
+  height: 6px;
+  width: 6px;
+  animation: up-bubble 20s 7.3s linear infinite;
+}
+.bubbles div:nth-child(105) {
+  height: 11px;
+  width: 11px;
+  animation: up-bubble 20s 28.1s linear infinite;
+}
+.bubbles div:nth-child(106) {
+  height: 12px;
+  width: 12px;
+  animation: up-bubble 20s 33.2s linear infinite;
+}
+.bubbles div:nth-child(107) {
+  height: 7px;
+  width: 7px;
+  animation: up-bubble 20s 18.4s linear infinite;
+}
+.bubbles div:nth-child(108) {
+  height: 26px;
+  width: 26px;
+  animation: up-bubble 20s 16.1s linear infinite;
+}
+.bubbles div:nth-child(109) {
+  height: 19px;
+  width: 19px;
+  animation: up-bubble 20s 19.2s linear infinite;
+}
+.bubbles div:nth-child(110) {
+  height: 26px;
+  width: 26px;
+  animation: up-bubble 20s 4.2s linear infinite;
+}
+.bubbles div:nth-child(111) {
+  height: 26px;
+  width: 26px;
+  animation: up-bubble 20s 17.5s linear infinite;
+}
+.bubbles div:nth-child(112) {
+  height: 21px;
+  width: 21px;
+  animation: up-bubble 20s 11.9s linear infinite;
+}
+.bubbles div:nth-child(113) {
+  height: 13px;
+  width: 13px;
+  animation: up-bubble 20s 30.2s linear infinite;
+}
+.bubbles div:nth-child(114) {
+  height: 8px;
+  width: 8px;
+  animation: up-bubble 20s 49.3s linear infinite;
+}
+.bubbles div:nth-child(115) {
+  height: 6px;
+  width: 6px;
+  animation: up-bubble 20s 16.3s linear infinite;
+}
+.bubbles div:nth-child(116) {
+  height: 7px;
+  width: 7px;
+  animation: up-bubble 20s 10.8s linear infinite;
+}
+.bubbles div:nth-child(117) {
+  height: 14px;
+  width: 14px;
+  animation: up-bubble 20s 24s linear infinite;
+}
+.bubbles div:nth-child(118) {
+  height: 23px;
+  width: 23px;
+  animation: up-bubble 20s 42.5s linear infinite;
+}
+.bubbles div:nth-child(119) {
+  height: 6px;
+  width: 6px;
+  animation: up-bubble 20s 45s linear infinite;
+}
+.bubbles div:nth-child(120) {
+  height: 9px;
+  width: 9px;
+  animation: up-bubble 20s 3.6s linear infinite;
+}
+.bubbles div:nth-child(121) {
+  height: 21px;
+  width: 21px;
+  animation: up-bubble 20s 25.1s linear infinite;
+}
+.bubbles div:nth-child(122) {
+  height: 27px;
+  width: 27px;
+  animation: up-bubble 20s 46.1s linear infinite;
+}
+.bubbles div:nth-child(123) {
+  height: 11px;
+  width: 11px;
+  animation: up-bubble 20s 27.5s linear infinite;
+}
+.bubbles div:nth-child(124) {
+  height: 13px;
+  width: 13px;
+  animation: up-bubble 20s 42.3s linear infinite;
+}
+.bubbles div:nth-child(125) {
+  height: 7px;
+  width: 7px;
+  animation: up-bubble 20s 20.7s linear infinite;
+}
+.bubbles div:nth-child(126) {
+  height: 7px;
+  width: 7px;
+  animation: up-bubble 20s 34.3s linear infinite;
+}
+.bubbles div:nth-child(127) {
+  height: 17px;
+  width: 17px;
+  animation: up-bubble 20s 39.8s linear infinite;
+}
+.bubbles div:nth-child(128) {
+  height: 29px;
+  width: 29px;
+  animation: up-bubble 20s 26.7s linear infinite;
+}
+.bubbles div:nth-child(129) {
+  height: 27px;
+  width: 27px;
+  animation: up-bubble 20s 42.4s linear infinite;
+}
+.bubbles div:nth-child(130) {
+  height: 19px;
+  width: 19px;
+  animation: up-bubble 20s 28.2s linear infinite;
+}
+.bubbles div:nth-child(131) {
+  height: 21px;
+  width: 21px;
+  animation: up-bubble 20s 23.7s linear infinite;
+}
+.bubbles div:nth-child(132) {
+  height: 12px;
+  width: 12px;
+  animation: up-bubble 20s 11.3s linear infinite;
+}
+.bubbles div:nth-child(133) {
+  height: 15px;
+  width: 15px;
+  animation: up-bubble 20s 7.1s linear infinite;
+}
+.bubbles div:nth-child(134) {
+  height: 16px;
+  width: 16px;
+  animation: up-bubble 20s 29.5s linear infinite;
+}
+.bubbles div:nth-child(135) {
+  height: 16px;
+  width: 16px;
+  animation: up-bubble 20s 27.1s linear infinite;
+}
+.bubbles div:nth-child(136) {
+  height: 27px;
+  width: 27px;
+  animation: up-bubble 20s 15.1s linear infinite;
+}
+.bubbles div:nth-child(137) {
+  height: 16px;
+  width: 16px;
+  animation: up-bubble 20s 38.5s linear infinite;
+}
+.bubbles div:nth-child(138) {
+  height: 30px;
+  width: 30px;
+  animation: up-bubble 20s 22.4s linear infinite;
+}
+.bubbles div:nth-child(139) {
+  height: 11px;
+  width: 11px;
+  animation: up-bubble 20s 39.3s linear infinite;
+}
+.bubbles div:nth-child(140) {
+  height: 7px;
+  width: 7px;
+  animation: up-bubble 20s 49.7s linear infinite;
+}
+.bubbles div:nth-child(141) {
+  height: 22px;
+  width: 22px;
+  animation: up-bubble 20s 5.9s linear infinite;
+}
+.bubbles div:nth-child(142) {
+  height: 9px;
+  width: 9px;
+  animation: up-bubble 20s 35.6s linear infinite;
+}
+.bubbles div:nth-child(143) {
+  height: 26px;
+  width: 26px;
+  animation: up-bubble 20s 33.6s linear infinite;
+}
+.bubbles div:nth-child(144) {
+  height: 9px;
+  width: 9px;
+  animation: up-bubble 20s 23.4s linear infinite;
+}
+.bubbles div:nth-child(145) {
+  height: 24px;
+  width: 24px;
+  animation: up-bubble 20s 7s linear infinite;
+}
+.bubbles div:nth-child(146) {
+  height: 30px;
+  width: 30px;
+  animation: up-bubble 20s 34.8s linear infinite;
+}
+.bubbles div:nth-child(147) {
+  height: 24px;
+  width: 24px;
+  animation: up-bubble 20s 32.6s linear infinite;
+}
+.bubbles div:nth-child(148) {
+  height: 19px;
+  width: 19px;
+  animation: up-bubble 20s 3.9s linear infinite;
+}
+.bubbles div:nth-child(149) {
+  height: 7px;
+  width: 7px;
+  animation: up-bubble 20s 31s linear infinite;
+}
+.bubbles div:nth-child(150) {
+  height: 14px;
+  width: 14px;
+  animation: up-bubble 20s 24.3s linear infinite;
+}
+.bubbles div:nth-child(151) {
+  height: 21px;
+  width: 21px;
+  animation: up-bubble 20s 0.8s linear infinite;
+}
+.bubbles div:nth-child(152) {
+  height: 12px;
+  width: 12px;
+  animation: up-bubble 20s 28s linear infinite;
+}
+.bubbles div:nth-child(153) {
+  height: 18px;
+  width: 18px;
+  animation: up-bubble 20s 43.1s linear infinite;
+}
+.bubbles div:nth-child(154) {
+  height: 28px;
+  width: 28px;
+  animation: up-bubble 20s 11.6s linear infinite;
+}
+.bubbles div:nth-child(155) {
+  height: 28px;
+  width: 28px;
+  animation: up-bubble 20s 10.8s linear infinite;
+}
+.bubbles div:nth-child(156) {
+  height: 20px;
+  width: 20px;
+  animation: up-bubble 20s 4.3s linear infinite;
+}
+.bubbles div:nth-child(157) {
+  height: 20px;
+  width: 20px;
+  animation: up-bubble 20s 25s linear infinite;
+}
+.bubbles div:nth-child(158) {
+  height: 15px;
+  width: 15px;
+  animation: up-bubble 20s 18.6s linear infinite;
+}
+.bubbles div:nth-child(159) {
+  height: 16px;
+  width: 16px;
+  animation: up-bubble 20s 41.8s linear infinite;
+}
+.bubbles div:nth-child(160) {
+  height: 7px;
+  width: 7px;
+  animation: up-bubble 20s 16.9s linear infinite;
+}
+.bubbles div:nth-child(161) {
+  height: 18px;
+  width: 18px;
+  animation: up-bubble 20s 18s linear infinite;
+}
+.bubbles div:nth-child(162) {
+  height: 29px;
+  width: 29px;
+  animation: up-bubble 20s 28.1s linear infinite;
+}
+.bubbles div:nth-child(163) {
+  height: 22px;
+  width: 22px;
+  animation: up-bubble 20s 49.1s linear infinite;
+}
+.bubbles div:nth-child(164) {
+  height: 6px;
+  width: 6px;
+  animation: up-bubble 20s 41.2s linear infinite;
+}
+.bubbles div:nth-child(165) {
+  height: 16px;
+  width: 16px;
+  animation: up-bubble 20s 0.7s linear infinite;
+}
+.bubbles div:nth-child(166) {
+  height: 20px;
+  width: 20px;
+  animation: up-bubble 20s 33.3s linear infinite;
+}
+.bubbles div:nth-child(167) {
+  height: 27px;
+  width: 27px;
+  animation: up-bubble 20s 43.5s linear infinite;
+}
+.bubbles div:nth-child(168) {
+  height: 7px;
+  width: 7px;
+  animation: up-bubble 20s 33s linear infinite;
+}
+.bubbles div:nth-child(169) {
+  height: 9px;
+  width: 9px;
+  animation: up-bubble 20s 7.1s linear infinite;
+}
+.bubbles div:nth-child(170) {
+  height: 27px;
+  width: 27px;
+  animation: up-bubble 20s 38.6s linear infinite;
+}
+.bubbles div:nth-child(171) {
+  height: 14px;
+  width: 14px;
+  animation: up-bubble 20s 14s linear infinite;
+}
+.bubbles div:nth-child(172) {
+  height: 11px;
+  width: 11px;
+  animation: up-bubble 20s 2.4s linear infinite;
+}
+.bubbles div:nth-child(173) {
+  height: 13px;
+  width: 13px;
+  animation: up-bubble 20s 4.2s linear infinite;
+}
+.bubbles div:nth-child(174) {
+  height: 29px;
+  width: 29px;
+  animation: up-bubble 20s 42.6s linear infinite;
+}
+.bubbles div:nth-child(175) {
+  height: 10px;
+  width: 10px;
+  animation: up-bubble 20s 46s linear infinite;
+}
+.bubbles div:nth-child(176) {
+  height: 24px;
+  width: 24px;
+  animation: up-bubble 20s 25.6s linear infinite;
+}
+.bubbles div:nth-child(177) {
+  height: 15px;
+  width: 15px;
+  animation: up-bubble 20s 15.4s linear infinite;
+}
+.bubbles div:nth-child(178) {
+  height: 19px;
+  width: 19px;
+  animation: up-bubble 20s 27.5s linear infinite;
+}
+.bubbles div:nth-child(179) {
+  height: 25px;
+  width: 25px;
+  animation: up-bubble 20s 14.4s linear infinite;
+}
+.bubbles div:nth-child(180) {
+  height: 19px;
+  width: 19px;
+  animation: up-bubble 20s 47.8s linear infinite;
+}
+
+@keyframes up-bubble {
+  to {
+    transform: translatey(-170vh);
+  }
+}
+.squirtle {
+  height: 324px;
+  width: 320px;
+  position: relative;
+}
+.squirtle .head-container {
+  height: 128px;
+  width: 146px;
+  position: absolute;
+  top: 0;
+  left: 54px;
+  filter: drop-shadow(0 0 1px #111) drop-shadow(0 0 1px #111);
+  z-index: 1;
+}
+.squirtle .head-container::after {
+  height: 22px;
+  width: 10px;
+  content: "";
+  position: absolute;
+  border-radius: 0 0 50% 20%/0 0 50% 20%;
+  top: 52px;
+  left: -4px;
+  box-shadow: 6px 1px #96d4cf;
+  transform: rotate(10deg);
+  z-index: -1;
+}
+.squirtle .head-container::before {
+  height: 40px;
+  width: 40px;
+  content: "";
+  position: absolute;
+  border-radius: 8px;
+  background: #96d4cf;
+  top: 63px;
+  transform: rotate(50deg);
+}
+.squirtle .head-container .head {
+  height: 128px;
+  width: 139px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 49% 50% 50% 48%/44% 50% 40% 30%;
+  background-color: #96d4cf;
+  background-image: linear-gradient(-70deg, #50a3a7 23%, transparent 24%), radial-gradient(156px 138px at 50px 50px, transparent 48%, #50a3a7 50%), radial-gradient(35px 103px at 135px 65px, #50a3a7 60%, transparent 64%);
+  overflow: hidden;
+}
+.squirtle .head-container .head::after {
+  height: 5px;
+  width: 6px;
+  content: "";
+  position: absolute;
+  top: 25px;
+  left: 13px;
+  border-radius: 0 4px 0 0;
+  border-right: 1px solid #111;
+}
+.squirtle .head-container .head::before {
+  height: 12px;
+  width: 12px;
+  content: "";
+  position: absolute;
+  top: 22px;
+  left: 68px;
+  border-radius: 18px 0 0 0;
+  border-left: 1px solid #111;
+}
+.squirtle .head-container .head .eye.left {
+  height: 40px;
+  width: 19px;
+  border: 1px solid #111;
+  border-radius: 50%;
+  position: absolute;
+  top: 26px;
+  left: -4px;
+  background-color: #a13431;
+  background-image: radial-gradient(4px 15px at 14px 10px, white 48%, transparent 50%), radial-gradient(16px 37px at 11px 15px, #251c21 48%, transparent 50%);
+}
+.squirtle .head-container .head .eye.right {
+  height: 49px;
+  width: 35px;
+  border: 1px solid #111;
+  border-radius: 61% 39% 36% 48%/84% 58% 12% 16%;
+  position: absolute;
+  top: 28px;
+  left: 68px;
+  background-color: #251c21;
+  background-image: radial-gradient(12px 24px at 11px 10px, white 45%, transparent 50%), radial-gradient(18px 33px at 12px 20px, #251c21 45%, transparent 50%), radial-gradient(29px 46px at 15px 42px, #a13431 48%, transparent 50%);
+  box-shadow: inset -6px -2px white;
+}
+.squirtle .head-container .head .eye {
+  overflow: hidden;
+}
+.squirtle .head-container .head .eye::after {
+  height: 100%;
+  width: 100%;
+  content: "";
+  position: absolute;
+  transform: translatey(-100%);
+  background-color: #96d4cf;
+  animation: blink 10s linear infinite;
+}
+.squirtle .head-container .head .nouse {
+  height: 24px;
+  width: 19px;
+  position: absolute;
+  top: 64px;
+  left: 10px;
+  border-radius: 50%;
+  box-shadow: 0 2px 0 -1px #111;
+}
+.squirtle .head-container .head .nouse::after {
+  height: 3px;
+  width: 3px;
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 2px;
+  border-radius: 0 3px 0 0;
+  border-right: 1px solid #111;
+}
+.squirtle .head-container .head .nouse::before {
+  height: 3px;
+  width: 3px;
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 3px;
+  border-radius: 3px 0 0 0;
+  border-left: 1px solid #111;
+}
+.squirtle .head-container .head .mouth {
+  height: 15px;
+  width: 64px;
+  position: absolute;
+  top: 79px;
+  left: 25px;
+  border-radius: 26% 74% 0% 0%/57% 100% 0% 0%;
+  border-top: 1px solid #111;
+}
+.squirtle .head-container .head .mouth::after {
+  height: 12px;
+  width: 23px;
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: #96d4cf;
+  top: -2px;
+  right: -15px;
+  box-shadow: 0 2px 0 -1px #111, 0 6px 0 -1px #96d4cf;
+}
+.squirtle .head-container .head .mouth::before {
+  height: 7px;
+  width: 13px;
+  content: "";
+  position: absolute;
+  border-radius: 5px 13px 0 50%;
+  top: -1px;
+  left: -25px;
+  border-top: 1px solid #111;
+}
+.squirtle .body {
+  height: 229px;
+  width: 316px;
+  position: absolute;
+  top: 94px;
+  left: 2px;
+}
+.squirtle .body .chest {
+  height: 179px;
+  width: 156px;
+  position: absolute;
+  top: 4px;
+  left: 58px;
+  border-radius: 50%;
+  background-color: #f1e57f;
+  background-image: radial-gradient(167px 40px at 106px 28px, #c8ba61 48%, transparent 50%), radial-gradient(138px 204px at 48px 45px, transparent 48%, #c8ba61 50%);
+  filter: drop-shadow(0 0 1px #111) drop-shadow(0 0 1px #111);
+  overflow: hidden;
+}
+.squirtle .body .chest .top {
+  height: 88px;
+  width: 177px;
+  position: absolute;
+  top: -25px;
+  left: -10px;
+  border-radius: 50%;
+  border: 1px solid #111;
+}
+.squirtle .body .chest .center {
+  height: 92px;
+  width: 80px;
+  position: absolute;
+  top: 60px;
+  left: 12px;
+  overflow: hidden;
+}
+.squirtle .body .chest .center::after {
+  height: 229px;
+  width: 106px;
+  content: "";
+  position: absolute;
+  top: -68px;
+  left: 32px;
+  border-radius: 50%;
+  border: 1px solid #111;
+}
+.squirtle .body .chest .center::before {
+  height: 94px;
+  width: 292px;
+  content: "";
+  position: absolute;
+  top: -40px;
+  left: -57px;
+  border-radius: 50%;
+  border: 1px solid #111;
+}
+.squirtle .body .chest .left {
+  height: 40px;
+  width: 12px;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  overflow: hidden;
+}
+.squirtle .body .chest .left::after {
+  height: 1px;
+  width: 106px;
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -50px;
+  border-top: 1px solid #111;
+  transform: rotate(65deg);
+}
+.squirtle .body .chest .left::before {
+  height: 1px;
+  width: 106px;
+  content: "";
+  position: absolute;
+  top: 43px;
+  left: -50px;
+  border-top: 1px solid #111;
+  transform: rotate(-65deg);
+}
+.squirtle .body .chest .right {
+  height: 143px;
+  width: 61px;
+  position: absolute;
+  top: 58px;
+  left: 92px;
+  overflow: hidden;
+}
+.squirtle .body .chest .right::after {
+  height: 1px;
+  width: 206px;
+  content: "";
+  position: absolute;
+  top: 62px;
+  left: -100px;
+  border-top: 1px solid #111;
+  transform: rotate(65deg);
+}
+.squirtle .body .chest .right::before {
+  height: 1px;
+  width: 206px;
+  content: "";
+  position: absolute;
+  top: 24px;
+  left: -88px;
+  border-top: 1px solid #111;
+  transform: rotate(-65deg);
+}
+.squirtle .body .chest .bottom {
+  height: 34px;
+  width: 69px;
+  position: absolute;
+  top: 152px;
+  left: 33px;
+  overflow: hidden;
+}
+.squirtle .body .chest .bottom::after {
+  height: 1px;
+  width: 206px;
+  content: "";
+  position: absolute;
+  top: 56px;
+  left: -1px;
+  border-top: 1px solid #111;
+  transform: rotate(33deg);
+}
+.squirtle .body .chest .bottom::before {
+  height: 1px;
+  width: 206px;
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: -89px;
+  border-top: 1px solid #111;
+  transform: rotate(-33deg);
+}
+.squirtle .body .shell {
+  height: 172px;
+  width: 40px;
+  position: absolute;
+  top: 6px;
+  left: 187px;
+  overflow: hidden;
+}
+.squirtle .body .shell .inner {
+  height: 171px;
+  width: 105px;
+  position: absolute;
+  top: 0;
+  right: 1px;
+  border-radius: 50%;
+  background-color: #be652b;
+  background-image: radial-gradient(78px 61px at 90px 151px, #9f4a25 48%, transparent 50%), radial-gradient(60px 114px at 50px 25px, #9f4a25 48%, transparent 50%), radial-gradient(87px 181px at 45px 94px, #9f4a25 48%, transparent 50%);
+  border: 1px solid #111;
+  filter: drop-shadow(0 0 1px #111);
+}
+.squirtle .body .shell .inner::after {
+  height: 114px;
+  width: 135px;
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  top: 24px;
+  right: -3px;
+  border: 1px solid #111;
+  overflow: hidden;
+}
+.squirtle .body .shell-border {
+  height: 177px;
+  width: 28px;
+  position: absolute;
+  top: -1px;
+  left: 176px;
+  filter: drop-shadow(0 0 1px #111) drop-shadow(0 0 1px #111);
+}
+.squirtle .body .shell-border .top {
+  height: 52px;
+  width: 21px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.squirtle .body .shell-border .top::before {
+  height: 23px;
+  width: 21px;
+  content: "";
+  position: absolute;
+  background: #daefe8;
+  border-radius: 50%;
+}
+.squirtle .body .shell-border .top::after {
+  height: 38px;
+  width: 21px;
+  content: "";
+  position: absolute;
+  background: #daefe8;
+  bottom: 0;
+  clip-path: polygon(0 0, 11% 21%, 4% 52%, 8% 76%, 21% 100%, 85% 100%, 65% 81%, 66% 66%, 76% 45%, 100% 0);
+}
+.squirtle .body .shell-border .center {
+  height: 65px;
+  width: 28px;
+  position: absolute;
+  top: 50px;
+  right: 0;
+}
+.squirtle .body .shell-border .center::before {
+  height: 100%;
+  width: 100%;
+  content: "";
+  position: absolute;
+  background: #daefe8;
+  border-radius: 50%;
+  clip-path: polygon(31% 0, 100% 0, 100% 100%, 30% 100%);
+}
+.squirtle .body .shell-border .center::after {
+  height: 100%;
+  width: 50%;
+  content: "";
+  position: absolute;
+  background: #daefe8;
+  clip-path: polygon(30% 0, 48% 20%, 57% 42%, 57% 60%, 45% 76%, 14% 100%, 100% 100%, 100% 0);
+}
+.squirtle .body .shell-border .bottom {
+  height: 63px;
+  width: 27px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.squirtle .body .shell-border .bottom::before {
+  height: 95%;
+  width: 23px;
+  content: "";
+  position: absolute;
+  background: #daefe8;
+  border-radius: 50%;
+  bottom: 0;
+  right: 0;
+  clip-path: polygon(27% 20%, 42% 15%, 63% 25%, 78% 38%, 89% 50%, 95% 64%, 90% 79%, 100% 100%, 30% 100%);
+}
+.squirtle .body .shell-border .bottom::after {
+  height: 100%;
+  width: 20px;
+  content: "";
+  position: absolute;
+  background: #daefe8;
+  border-radius: 4px 0 10px 20px;
+  clip-path: polygon(0 0, 87% -3%, 62% 8%, 95% 43%, 92% 60%, 100% 100%, 0 100%, 21% 79%, 35% 64%, 40% 49%, 35% 34%, 15% 21%);
+}
+.squirtle .body .arm.left {
+  height: 63px;
+  width: 95px;
+  position: absolute;
+  top: 24px;
+  left: 0;
+  overflow: hidden;
+  filter: drop-shadow(0 0 1px #111) drop-shadow(0 0 1px #111);
+  animation: move-arm 6s linear infinite;
+  transform-origin: 100% 30%;
+}
+.squirtle .body .arm.left::before {
+  height: 90px;
+  width: 155px;
+  content: "";
+  position: absolute;
+  left: 20px;
+  border-radius: 50%;
+  background: linear-gradient(transparent 50%, #50a3a7 0), radial-gradient(at 45% 50%, #50a3a7 50%, #96d4cf 51%);
+}
+.squirtle .body .arm.left::after {
+  height: 14px;
+  width: 12px;
+  content: "";
+  position: absolute;
+  position: absolute;
+  top: 35px;
+  left: 24px;
+  border: 1px solid;
+  border-color: transparent transparent #111 #111;
+  transform: rotate(40deg);
+}
+.squirtle .body .arm.left .hand {
+  height: 36px;
+  width: 30px;
+  position: absolute;
+  top: 27px;
+  left: 0;
+  border-radius: 100% 0% 0% 100%/20% 0% 0% 24%;
+  background: radial-gradient(42px 22px at 15px 3px, #96d4cf 48%, #50a3a7 50%);
+  clip-path: polygon(0 5%, 0% 0%, 100% 0, 100% 100%, 0 100%, 0% 80%, 23% 46%);
+}
+.squirtle .body .arm.right {
+  height: 81px;
+  width: 78px;
+  position: absolute;
+  top: 27px;
+  left: 122px;
+  filter: drop-shadow(0 0 1px #111) drop-shadow(0 0 1px #111);
+  animation: move-arm 6s linear infinite;
+  transform-origin: 80% 40%;
+}
+.squirtle .body .arm.right::after {
+  height: 14px;
+  width: 20px;
+  content: "";
+  position: absolute;
+  background: radial-gradient(83px 39px at -21px -5px, #96d4cf 48%, #50a3a7 50%);
+  bottom: 7px;
+  border-radius: 0 0 0 3px;
+  clip-path: polygon(0 11px, 50% 0, 100% 0, 100% 100%, 0 100%);
+}
+.squirtle .body .arm.right::before {
+  height: 85px;
+  width: 61px;
+  content: "";
+  position: absolute;
+  border-radius: 45% 55% 50% 50%/44% 50% 50% 56%;
+  right: 5px;
+  top: -2px;
+  background-color: #96d4cf;
+  transform: rotate(32deg);
+  background-image: radial-gradient(80px at -7px 47px, transparent 48%, #50a3a7 50%), radial-gradient(36px at 38px 69px, #50a3a7 48%, transparent 50%), radial-gradient(37px 67px at 18px 55px, transparent 48%, #50a3a7 50%);
+}
+.squirtle .body .arm.right .hand {
+  height: 29px;
+  width: 35px;
+  position: absolute;
+  bottom: 9px;
+  left: 17px;
+}
+.squirtle .body .arm.right .hand::after {
+  height: 14px;
+  width: 14px;
+  content: "";
+  position: absolute;
+  border: 1px solid;
+  border-radius: 0 4px 0 0;
+  border-color: #111 #111 transparent transparent;
+  transform: rotate(-40deg);
+  top: 1px;
+  left: 1px;
+}
+.squirtle .body .arm.right .hand::before {
+  height: 14px;
+  width: 14px;
+  content: "";
+  position: absolute;
+  border: 1px solid;
+  border-radius: 0 4px 0 0;
+  border-color: #111 #111 transparent transparent;
+  transform: rotate(5deg);
+  top: 12px;
+  left: 21px;
+  box-shadow: inset 0 2px 0 #96d4cf;
+}
+.squirtle .body .leg.left {
+  filter: drop-shadow(0 0 1px #111) drop-shadow(0 0 1px #111);
+}
+.squirtle .body .leg.left .top {
+  height: 69px;
+  width: 88px;
+  position: absolute;
+  top: 115px;
+  left: 41px;
+  overflow: hidden;
+}
+.squirtle .body .leg.left .top::after {
+  height: 64px;
+  width: 71px;
+  content: "";
+  position: absolute;
+  top: 51px;
+  left: 48px;
+  border-radius: 50%;
+  box-shadow: -20px -20px #50a3a7;
+}
+.squirtle .body .leg.left .top::before {
+  height: 116px;
+  width: 88px;
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background-image: radial-gradient(66px 133px at -4px -6px, #96d4cf 48%, #50a3a7 50% 90%, transparent 91%);
+}
+.squirtle .body .leg.left .foot {
+  height: 27px;
+  width: 66px;
+  position: absolute;
+  top: 184px;
+  left: 28px;
+}
+.squirtle .body .leg.left .foot::before {
+  height: 31px;
+  width: 66px;
+  content: "";
+  position: absolute;
+  top: -3px;
+  border-radius: 50%;
+  background: #50a3a7;
+  clip-path: polygon(0 16px, 1px 3px, 60px 3px, 62px 18px, 21px 30px, 21px 28px, 22px 22px, 8px 24px, 6px 23px, 10px 16px);
+}
+.squirtle .body .leg.left .foot::after {
+  height: 48px;
+  width: 31px;
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  right: -26px;
+  top: -9px;
+  box-shadow: -17px -23px 0 #50a3a7;
+}
+.squirtle .body .leg.left .foot .fingers {
+  z-index: 1;
+}
+.squirtle .body .leg.left .foot .fingers::before {
+  height: 5px;
+  width: 1px;
+  content: "";
+  position: absolute;
+  border-left: 1px solid #111;
+  left: 9px;
+  top: 8px;
+  transform-origin: bottom;
+  transform: rotate(30deg);
+}
+.squirtle .body .leg.left .foot .fingers::after {
+  height: 5px;
+  width: 6px;
+  content: "";
+  position: absolute;
+  border-left: 1px solid #111;
+  left: 21px;
+  top: 15px;
+  border-radius: 6px 0 0 0;
+}
+.squirtle .body .leg.right {
+  height: 99px;
+  width: 73px;
+  position: absolute;
+  bottom: 1px;
+  left: 142px;
+  filter: drop-shadow(0 0 1px #111) drop-shadow(0 0 1px #111);
+}
+.squirtle .body .leg.right .top {
+  height: 42px;
+  width: 69px;
+  position: absolute;
+  border-radius: 55% 45% 0% 0%/100% 80% 0% 0%;
+  background-image: radial-gradient(53px 45px at 25px 35px, #96d4cf 48%, transparent 50%), radial-gradient(42px 57px at 36px 33px, #96d4cf 48%, #50a3a7 50%);
+}
+.squirtle .body .leg.right .center {
+  height: 31px;
+  width: 69px;
+  position: absolute;
+  top: 42px;
+  overflow: hidden;
+}
+.squirtle .body .leg.right .center::before {
+  height: 69px;
+  width: 53px;
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -41px;
+  border-radius: 50%;
+  box-shadow: 4px 0 0 #50a3a7, 5px -20px 0 #96d4cf;
+}
+.squirtle .body .leg.right .center::after {
+  height: 92px;
+  width: 54px;
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -42px;
+  border-radius: 0 50% 50% 0;
+  background: radial-gradient(56px 77px at 14px 32px, #96d4cf 48%, #50a3a7 50%);
+}
+.squirtle .body .leg.right .foot {
+  height: 26px;
+  width: 61px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+}
+.squirtle .body .leg.right .foot::before {
+  height: 54px;
+  width: 20px;
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: -18px;
+  border-radius: 50%;
+  box-shadow: 10px -20px #50a3a7;
+}
+.squirtle .body .leg.right .foot::after {
+  height: 29px;
+  width: 21px;
+  content: "";
+  position: absolute;
+  top: -9px;
+  right: -11px;
+  border-radius: 50%;
+  box-shadow: -7px -2px #50a3a7;
+}
+.squirtle .body .leg.right .foot .finger:nth-child(1) {
+  height: 18px;
+  width: 28px;
+  position: absolute;
+  bottom: -10px;
+  left: 1px;
+  border-radius: 50%;
+  box-shadow: 2px -12px #50a3a7, 6px -20px #50a3a7;
+}
+.squirtle .body .leg.right .foot .finger:nth-child(2) {
+  height: 19px;
+  width: 29px;
+  position: absolute;
+  bottom: -11px;
+  right: 1px;
+  border-radius: 50%;
+  box-shadow: -11px -22px #50a3a7, -2px -9px 0 -3px #50a3a7, -11px -14px #50a3a7;
+}
+.squirtle .body .tail {
+  height: 89px;
+  width: 143px;
+  position: absolute;
+  bottom: 31px;
+  right: 1px;
+  filter: drop-shadow(0 0 1px #111) drop-shadow(0 0 1px #111);
+  overflow: hidden;
+  animation: move-tail 3s alternate linear infinite;
+  transform-origin: 5% 40%;
+}
+.squirtle .body .tail .center {
+  height: 89px;
+  width: 85px;
+  position: absolude;
+}
+.squirtle .body .tail .center::before {
+  height: 43px;
+  width: 117px;
+  content: "";
+  position: absolute;
+  top: 80px;
+  right: 48px;
+  border-radius: 50%;
+  box-shadow: -10px -14px #50a3a7;
+}
+.squirtle .body .tail .center::after {
+  height: 56px;
+  width: 88px;
+  content: "";
+  position: absolute;
+  top: -7px;
+  right: 80px;
+  border-radius: 50%;
+  box-shadow: -4px 25px #96d4cf, 13px 26px #96d4cf;
+}
+.squirtle .body .tail::before {
+  height: 79px;
+  width: 74px;
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 53px;
+  border-radius: 50%;
+  background-image: radial-gradient(71px 54px at -5px 20px, #96d4cf 48%, transparent 50%), radial-gradient(71px 54px at -5px 35px, #96d4cf 48%, #50a3a7 50%);
+  box-shadow: 3px -3px #96d4cf;
+}
+.squirtle .body .tail::after {
+  height: 14px;
+  width: 48px;
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  top: 55px;
+  left: 24px;
+  box-shadow: -2px 7px #50a3a7;
+}
+.squirtle .body .tail .end {
+  height: 80px;
+  width: 78px;
+  position: absolute;
+  top: 1px;
+  right: 0;
+  border-radius: 50%;
+  background-image: radial-gradient(71px 54px at -10px 40px, #96d4cf 48%, transparent 50%), radial-gradient(91px 94px at 40px 10px, #96d4cf 48%, #50a3a7 50%);
+  overflow: hidden;
+}
+.squirtle .body .tail .end::before {
+  height: 43px;
+  width: 36px;
+  content: "";
+  position: absolute;
+  border-radius: 50% 50% 0 50%;
+  border: 1px solid;
+  bottom: 0;
+  left: 21px;
+  border-color: #111 transparent #111 #111;
+}
+.squirtle::before {
+  height: 40%;
+  width: 120%;
+  content: "";
+  position: absolute;
+  position: absolute;
+  bottom: -12%;
+  left: 9%;
+  background: #000;
+  border-radius: 50%;
+}
+
+@keyframes blink {
+  0%, 30%, 34%, 100% {
+    transform: translatey(-100%);
+  }
+  32% {
+    transform: translatey(0);
+  }
+}
+@keyframes move-tail {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(10deg);
+  }
+}
+@keyframes move-arm {
+  0%, 20%, 40%, 40%, 60%, 100% {
+    transform: rotate(0);
+  }
+  30%, 50% {
+    transform: rotate(-5deg);
+  }
+}
+
+/*# sourceMappingURL=escueromplea%C3%B1os.css.map */
